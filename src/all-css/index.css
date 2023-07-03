@@ -1,0 +1,55 @@
+#heroSection {
+    background-image: url("../all-image/heroBg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+#heroSection::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(44, 38, 38, .8));
+    z-index: -1;
+}
+
+
+#heroContainer {
+    height: calc(100vh - 100px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.topHero {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.topHero h1 {
+    font-size: 3em;
+}
+
+.heroButtonWr {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a.heroBtn:first-child {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+a.heroBtn:last-child {
+    background: var(--col4);
+    
+    border: 2px solid var(--col4);
+}

@@ -1,0 +1,87 @@
+header {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    z-index: 7;
+}
+
+#headerContainer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.headerLogo {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.headerLogo a {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--col4);
+}
+
+.headerLogo a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--col4);
+}
+
+#headerContainer nav {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#headerContainer nav ul {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+#headerContainer nav ul li {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 60%;
+    border-bottom: 2px solid transparent;
+    color: var(--col3);
+    cursor: pointer;
+}
+
+#headerContainer nav ul li:hover {
+    border-color: #fff;
+}
+
+#headerContainer nav ul li span:last-child {
+    fill: #fff;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+#headerContainer nav ul li span:last-child.rotate {
+    margin-top: 2px;
+    fill: #fff;
+    rotate: 180deg;
+}
+
+
+.burgerMenu span {
+    font-size: 2em;
+    fill: #fff;
+    display: none;
+}

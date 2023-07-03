@@ -1,0 +1,289 @@
+#navSection {
+    transform: translateY(-1000%);
+    -webkit-transform: translateY(-1000%);
+    -moz-transform: translateY(-1000%);
+    -ms-transform: translateY(-1000%);
+    -o-transform: translateY(-1000%);
+    padding-top: 100px;
+    position: relative;
+    z-index: 4;
+}
+
+#navSection.slide {
+    background: rgba(216, 213, 213, 0.566);
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    padding-top: 100px;
+    position: relative;
+    z-index: 4;
+}
+
+.navWr {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0 1rem;
+    background: rgb(198, 198, 198);
+    height: calc(100vh - 100px);
+
+}
+
+#navContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.navGB {
+    position: absolute;
+    transform: translateY(-1000%);
+    -webkit-transform: translateY(-1000%);
+    -moz-transform: translateY(-1000%);
+    -ms-transform: translateY(-1000%);
+    -o-transform: translateY(-1000%);
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+
+.navGB.selected {
+    position: absolute;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transition-delay: .1s;
+}
+
+
+/* VEHICLES BOX PR */
+
+.vehiclesBoxPr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 22% 53%;
+    height: calc(100vh - 200px);
+}
+
+.leftVehicle {
+    height: 100%;
+    background: linear-gradient(to left, grey, rgb(52, 41, 41));
+}
+
+.listCarPr {
+    height: 100%;
+}
+
+.listCarChild {
+    height: calc(100% / 4);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--col3);
+}
+
+.listCarChild.active {
+    background: linear-gradient(to left, rgb(52, 41, 41), grey);
+}
+
+.leftListCarChild {
+    width: 40%;
+    height: 70%;
+    position: relative;
+}
+
+.leftListCarChild::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.leftListCarChild img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middleVehicle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.topMiddleVehicle {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    color: var(--col1);
+}
+
+.topMiddleVehicle h4 {
+    font-size: 32px;
+}
+
+.buttonWr {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+a.headerBtn:last-child {
+    background: var(--col1);
+}
+
+.rightListCarChild {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.rightVehicle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rightVehicle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -webkit-transition: 0;
+    -moz-transition: 0;
+    -ms-transition: 0;
+    -o-transition: 0;
+}
+
+.rightVehicle img.show {
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+/* SHOPPING TOOLS BOX */
+
+.shoppingToolsBox {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+
+.leftShoppingTools {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.leftShoppingTools img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.rightShoppingTools  {
+    width: 40%;
+    height: 100%;
+}
+
+.rightShoppingTools ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightShoppingTools ul li {
+    border-bottom: 1px dashed var(--col4);
+    padding: 1rem 0;
+}
+
+.rightShoppingTools ul li a {
+    font-size: 18px;
+    color: var(--col1);
+}
+
+/* AFTER SELL */
+
+.afterSellBox {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+.leftAfterSellBox {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.leftAfterSellBox img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.rightAfterSellBox {
+    width: 40%;
+    height: 100%;
+}
+
+.rightAfterSellBox ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightAfterSellBox ul li {
+    border-bottom: 1px dashed var(--col4);
+    padding: 1rem 0;
+}
+
+.rightAfterSellBox ul li a {
+    font-size: 18px;
+    color: var(--col1);
+}
