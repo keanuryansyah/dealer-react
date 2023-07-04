@@ -2,8 +2,10 @@
     background-image: url("../all-image/heroBg.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
     z-index: 1;
+    padding-top: 100px;
 }
 
 #heroSection::before {
@@ -14,6 +16,7 @@
     left: 0;
     background: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(44, 38, 38, .8));
     z-index: -1;
+    top: 0;
 }
 
 
@@ -22,18 +25,14 @@
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
 }
 
 .topHero {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-}
-
-.topHero h1 {
-    font-size: 3em;
+    gap: 1rem;
 }
 
 .heroButtonWr {
@@ -45,11 +44,229 @@
 
 a.heroBtn:first-child {
     background: transparent;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+a.heroBtn:first-child:hover {
+    background-color: rgba(128, 128, 128, .4);
 }
 
 a.heroBtn:last-child {
     background: var(--col4);
-    
-    border: 2px solid var(--col4);
+    border: 1px solid var(--col4);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
 }
+
+a.heroBtn:last-child:hover {
+    background: #0b8ab5;
+}
+
+/* RECOMEND SECTION */
+
+#recomendSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#recomendContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    font-size: 32px;
+    top: 50%;
+    fill: #000;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.prev {
+    left: 10px;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.next {
+    right: 10px;
+    box-shadow: -4px 4px 4px gray;
+}
+
+.recomendBoxPr {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.recomendBoxPr::-webkit-scrollbar {
+    display: none;
+}
+
+.recomendBoxChild {
+    width: calc(100% / 4);
+    flex-shrink: 0;
+    height: 500px;
+    background: rgb(237, 236, 236);
+}
+
+.topRecomend {
+    height: 45%;
+    width: 100%;
+}
+
+.topRecomend img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.topBottomRecomend {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    line-height: 1.4;
+}
+
+.bottomRecomend {
+    height: 55%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttonRecomend a {
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.buttonRecomend a:hover {
+    background: #0b8ab5;
+}
+
+/* CARD CAR SECTION */
+
+#cardCarSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#cardCarContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.prevCar {
+    left: 0;
+}
+
+.nextCar {
+    right: 0;
+}
+
+
+.cardCarBoxPr {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.cardCarBoxPr::-webkit-scrollbar {
+    display: none;
+}
+
+.cardCarBoxChild {
+    height: 300px;
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.backgroundCar {
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+.backgroundCar::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--col3);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.cardCarBoxChild:hover .backgroundCar::before {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.backgroundCar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+}
+
+.car Img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+

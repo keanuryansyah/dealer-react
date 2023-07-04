@@ -71,7 +71,7 @@ const HeaderComps = () => {
                 <li
                   onClick={() => slide({ trigger: "After sell", bool: true })}
                 >
-                  <span>After sell</span>
+                  <span>After sells</span>
                   <span
                     className={
                       slideDown.trigger == "After sell" ? "rotate" : ""
@@ -117,202 +117,207 @@ const HeaderComps = () => {
         </section>
       </header>
 
-      <section id="navSection" className={slideDown.bool ? "slide" : ""}>
-        <div className="navWr">
-          <div id="navContainer" className="container">
-            <div
-              className={`vehiclesBoxPr navGB ${
-                slideDown.trigger == "Vehicles" ? "selected" : ""
-              }`}
-            >
-              <div className="leftVehicle">
-                <div className="listCarPr">
-                  <div
-                    className={`listCarChild ${
-                      active == "Accord" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      changeAll({ carname: "Accord", desccar: "Handsome car" })
-                    }
-                  >
-                    <div className="leftListCarChild">
-                      <img src="../src/all-image/Accord.jpg" alt="" />
+      <div id="navSectionWr" className={slideDown.bool ? "slide" : ""}>
+        <section id="navSection">
+          <div className="navCtnWr">
+            <div id="navContainer" className="container">
+              <div
+                className={`vehiclesBoxPr navGB ${
+                  slideDown.trigger == "Vehicles" ? "selected" : ""
+                }`}
+              >
+                <div className="leftVehicle">
+                  <div className="listCarPr">
+                    <div
+                      className={`listCarChild ${
+                        active == "Accord" ? "active" : ""
+                      }`}
+                      onClick={() =>
+                        changeAll({
+                          carname: "Accord",
+                          desccar: "Handsome car",
+                        })
+                      }
+                    >
+                      <div className="leftListCarChild">
+                        <img src="../src/all-image/Accord.jpg" alt="" />
+                      </div>
+                      <div className="rightListCarChild">
+                        <h3>Accord</h3>
+                        <p>Handsome car</p>
+                      </div>
                     </div>
-                    <div className="rightListCarChild">
-                      <h3>Accord</h3>
-                      <p>Handsome car</p>
+                    <div
+                      className={`listCarChild ${
+                        active == "Ferrari" ? "active" : ""
+                      }`}
+                      onClick={() =>
+                        changeAll({ carname: "Ferrari", desccar: "Cool car" })
+                      }
+                    >
+                      <div className="leftListCarChild">
+                        <img src="../src/all-image/Ferrari.jpg" alt="" />
+                      </div>
+                      <div className="rightListCarChild">
+                        <h3>Ferrari</h3>
+                        <p>Cool car</p>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className={`listCarChild ${
-                      active == "Ferrari" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      changeAll({ carname: "Ferrari", desccar: "Cool car" })
-                    }
-                  >
-                    <div className="leftListCarChild">
-                      <img src="../src/all-image/Ferrari.jpg" alt="" />
+                    <div
+                      className={`listCarChild ${
+                        active == "Lamborghini" ? "active" : ""
+                      }`}
+                      onClick={() =>
+                        changeAll({
+                          carname: "Lamborghini",
+                          desccar: "Excellent car",
+                        })
+                      }
+                    >
+                      <div className="leftListCarChild">
+                        <img src="../src/all-image/Lamborghini.jpg" alt="" />
+                      </div>
+                      <div className="rightListCarChild">
+                        <h3>Lamborghini</h3>
+                        <p>Excellent car</p>
+                      </div>
                     </div>
-                    <div className="rightListCarChild">
-                      <h3>Ferrari</h3>
-                      <p>Cool car</p>
-                    </div>
-                  </div>
-                  <div
-                    className={`listCarChild ${
-                      active == "Lamborghini" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      changeAll({
-                        carname: "Lamborghini",
-                        desccar: "Excellent car",
-                      })
-                    }
-                  >
-                    <div className="leftListCarChild">
-                      <img src="../src/all-image/Lamborghini.jpg" alt="" />
-                    </div>
-                    <div className="rightListCarChild">
-                      <h3>Lamborghini</h3>
-                      <p>Excellent car</p>
-                    </div>
-                  </div>
-                  <div
-                    className={`listCarChild ${
-                      active == "Classic-vw" ? "active" : ""
-                    }`}
-                    onClick={() =>
-                      changeAll({
-                        carname: "Classic-vw",
-                        desccar: "Classic car",
-                      })
-                    }
-                  >
-                    <div className="leftListCarChild">
-                      <img src="../src/all-image/Classic-vw.jpg" alt="" />
-                    </div>
-                    <div className="rightListCarChild">
-                      <h3>Classic-vw</h3>
-                      <p>Classic car</p>
+                    <div
+                      className={`listCarChild ${
+                        active == "Classic-vw" ? "active" : ""
+                      }`}
+                      onClick={() =>
+                        changeAll({
+                          carname: "Classic-vw",
+                          desccar: "Classic car",
+                        })
+                      }
+                    >
+                      <div className="leftListCarChild">
+                        <img src="../src/all-image/Classic-vw.jpg" alt="" />
+                      </div>
+                      <div className="rightListCarChild">
+                        <h3>Classic-vw</h3>
+                        <p>Classic car</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="middleVehicle">
-                <div className="topMiddleVehicle">
-                  <h4>{data == "" ? "Accord" : data.carname}</h4>
-                  <p>{data == "" ? "Handsome car" : data.desccar}</p>
+                <div className="middleVehicle">
+                  <div className="topMiddleVehicle">
+                    <h4>{data == "" ? "Accord" : data.carname}</h4>
+                    <p>{data == "" ? "Handsome car" : data.desccar}</p>
+                  </div>
+                  <div className="buttonWr">
+                    <a className="globalBtn headerBtn" href={`/${active}`}>
+                      View detail
+                    </a>
+                    <a className="globalBtn headerBtn" href="">
+                      Book now
+                    </a>
+                  </div>
                 </div>
-                <div className="buttonWr">
-                  <a className="globalBtn headerBtn" href={`/${active}`}>
-                    View detail
-                  </a>
-                  <a className="globalBtn headerBtn" href="">
-                    Book now
-                  </a>
+                <div className="rightVehicle">
+                  <img
+                    src={`../src/all-image/${active}.jpg`}
+                    alt=""
+                    className={active == "Accord" ? "show" : ""}
+                  />
+                  <img
+                    src={`../src/all-image/${active}.jpg`}
+                    alt=""
+                    className={active == "Ferrari" ? "show" : ""}
+                  />
+                  <img
+                    src={`../src/all-image/${active}.jpg`}
+                    alt=""
+                    className={active == "Lamborghini" ? "show" : ""}
+                  />
+                  <img
+                    src={`../src/all-image/${active}.jpg`}
+                    alt=""
+                    className={active == "Classic-vw" ? "show" : ""}
+                  />
                 </div>
               </div>
-              <div className="rightVehicle">
-                <img
-                  src={`../src/all-image/${active}.jpg`}
-                  alt=""
-                  className={active == "Accord" ? "show" : ""}
-                />
-                <img
-                  src={`../src/all-image/${active}.jpg`}
-                  alt=""
-                  className={active == "Ferrari" ? "show" : ""}
-                />
-                <img
-                  src={`../src/all-image/${active}.jpg`}
-                  alt=""
-                  className={active == "Lamborghini" ? "show" : ""}
-                />
-                <img
-                  src={`../src/all-image/${active}.jpg`}
-                  alt=""
-                  className={active == "Classic-vw" ? "show" : ""}
-                />
+              <div
+                className={`shoppingToolsBox navGB ${
+                  slideDown.trigger == "Shopping tools" ? "selected" : ""
+                }`}
+              >
+                <div className="leftShoppingTools">
+                  <img src="../src/all-image/shoppingTools.png" alt="" />
+                </div>
+                <div className="rightShoppingTools">
+                  <ul>
+                    <li>
+                      <a href="#">Build and price</a>
+                    </li>
+                    <li>
+                      <a href="#">Search inventory</a>
+                    </li>
+                    <li>
+                      <a href="#">Find a dealer</a>
+                    </li>
+                    <li>
+                      <a href="#">Shop online</a>
+                    </li>
+                    <li>
+                      <a href="#">Request a quote</a>
+                    </li>
+                    <li>
+                      <a href="#">Book a test drive</a>
+                    </li>
+                    <li>
+                      <a href="#">Compare vehicles</a>
+                    </li>
+                    <li>
+                      <a href="#">Certified pre-owned</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div
-              className={`shoppingToolsBox navGB ${
-                slideDown.trigger == "Shopping tools" ? "selected" : ""
-              }`}
-            >
-              <div className="leftShoppingTools">
-                <img src="../src/all-image/shoppingTools.png" alt="" />
-              </div>
-              <div className="rightShoppingTools">
-                <ul>
-                  <li>
-                    <a href="#">Build and price</a>
-                  </li>
-                  <li>
-                    <a href="#">Search inventory</a>
-                  </li>
-                  <li>
-                    <a href="#">Find a dealer</a>
-                  </li>
-                  <li>
-                    <a href="#">Shop online</a>
-                  </li>
-                  <li>
-                    <a href="#">Request a quote</a>
-                  </li>
-                  <li>
-                    <a href="#">Book a test drive</a>
-                  </li>
-                  <li>
-                    <a href="#">Compare vehicles</a>
-                  </li>
-                  <li>
-                    <a href="#">Certified pre-owned</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className={`afterSellBox navGB ${
-                slideDown.trigger == "After sell" ? "selected" : ""
-              }`}
-            >
-              <div className="leftAfterSellBox">
-                <img src="../src/all-image/afterSell.jpg" alt="" />
-              </div>
-              <div className="rightAfterSellBox">
-                <ul>
-                  <li>
-                    <a href="#">Service menu</a>
-                  </li>
-                  <li>
-                    <a href="#">Owners manual</a>
-                  </li>
-                  <li>
-                    <a href="#">Austral mobile apps</a>
-                  </li>
-                  <li>
-                    <a href="#">Austral mobile service</a>
-                  </li>
-                  <li>
-                    <a href="#">Austral we care</a>
-                  </li>
-                  <li>
-                    <a href="#">Facilities</a>
-                  </li>
-                  <li>
-                    <a href="#">Booking service</a>
-                  </li>
-                  <li>
-                    <a href="#">Assurance</a>
-                  </li>
-                </ul>
+              <div
+                className={`afterSellBox navGB ${
+                  slideDown.trigger == "After sell" ? "selected" : ""
+                }`}
+              >
+                <div className="leftAfterSellBox">
+                  <img src="../src/all-image/afterSell.jpg" alt="" />
+                </div>
+                <div className="rightAfterSellBox">
+                  <ul>
+                    <li>
+                      <a href="#">Service menu</a>
+                    </li>
+                    <li>
+                      <a href="#">Owners manual</a>
+                    </li>
+                    <li>
+                      <a href="#">Austral mobile apps</a>
+                    </li>
+                    <li>
+                      <a href="#">Austral mobile service</a>
+                    </li>
+                    <li>
+                      <a href="#">Austral we care</a>
+                    </li>
+                    <li>
+                      <a href="#">Facilities</a>
+                    </li>
+                    <li>
+                      <a href="#">Booking service</a>
+                    </li>
+                    <li>
+                      <a href="#">Assurance</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
